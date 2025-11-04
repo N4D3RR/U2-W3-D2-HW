@@ -10,7 +10,6 @@ const updateSavedValue = function () {
   }
 }
 
-// Controlla se ci sono nomi salvati all'apertura della pagina
 updateSavedValue()
 const form = document.getElementById("form")
 
