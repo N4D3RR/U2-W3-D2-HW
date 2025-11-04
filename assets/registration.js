@@ -1,5 +1,7 @@
+//KEY per localStorage
 const KEY = "nomeUtente"
 
+// verifica e recupero dati
 const updateSavedValue = function () {
   const savedName = localStorage.getItem(KEY)
   const savedValueDiv = document.getElementById("savedValue")
@@ -10,11 +12,15 @@ const updateSavedValue = function () {
   }
 }
 
+// al caricamento della pagina, verifico
 updateSavedValue()
+
+//var varie
 const form = document.getElementById("form")
-
 const saveButton = document.getElementById("saveBtn")
+const removeButton = document.getElementById("removeBtn")
 
+//salva
 saveButton.addEventListener("click", () => {
   const nameInput = document.getElementById("nameInput").value.trim()
   if (nameInput) {
@@ -24,7 +30,7 @@ saveButton.addEventListener("click", () => {
   form.reset()
 })
 
-const removeButton = document.getElementById("removeBtn")
+//elimina
 removeButton.addEventListener("click", () => {
   localStorage.removeItem(KEY)
   updateSavedValue()
